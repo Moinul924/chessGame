@@ -46,9 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Board.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Board.cs" />
     <Compile Include="ChessBoardSquares.cs">
       <SubType>Component</SubType>
     </Compile>

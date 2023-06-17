@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Chess2
 {
-    public class Board: ChessBoardSquares
+    public class Board
     {
         public static ChessBoardSquares[,] ChessBoard = new ChessBoardSquares[8,8];
 
@@ -16,12 +16,13 @@ namespace Chess2
             ChessBoard = new ChessBoardSquares[8, 8]; 
         }
 
-        public void RemovePiece(int SquarePositionX, int SquarePositionY)
+        public static void RemovePiece(int SquarePositionX, int SquarePositionY)
         {
             ChessBoard[SquarePositionX, SquarePositionY].Image = null;
+            Console.WriteLine("dgfdsg");
         }
 
-        public void AddPiece(Image PieceCopied , int SquarePositionX, int SquarePositionY)
+        public static void AddPiece(Image PieceCopied , int SquarePositionX, int SquarePositionY)
         {
             ChessBoard[SquarePositionX,SquarePositionY].Image = PieceCopied;
         }
