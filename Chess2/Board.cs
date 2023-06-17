@@ -19,7 +19,7 @@ namespace Chess2
         public static void RemovePiece(int SquarePositionX, int SquarePositionY)
         {
             ChessBoard[SquarePositionX, SquarePositionY].Image = null;
-            Console.WriteLine("dgfdsg");
+           
         }
 
         public static void AddPiece(Image PieceCopied , int SquarePositionX, int SquarePositionY)
