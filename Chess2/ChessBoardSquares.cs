@@ -11,9 +11,12 @@ namespace Chess2
     {
         public int SquarePositionX { get; set; }
         public int SquarePositionY { get; set; }
-        public string Piece { get; set; }
+        public ChessPiece chessPiece  { get; set; }
 
-        
+        public void RemoveChessPiece()
+        {
+            
+        }
        
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -39,11 +40,12 @@ namespace Chess2
                     var NewBoardSquares = new ChessBoardSquares
                     {
                         Size = new Size(SquareSize, SquareSize),
-                        Location = new Point(SquareSize * file + 180 , SquareSize * rank + 60),
+                        Location = new Point(SquareSize * file + 180, SquareSize * rank + 60),
                         AllowDrop = true,
                         SizeMode = PictureBoxSizeMode.CenterImage,
                         SquarePositionX = file,
                         SquarePositionY = rank,
+                        
                     };
                     if ((rank + file) % 2 == 0)
                     {
@@ -66,8 +68,7 @@ namespace Chess2
                     
                 }
             }
-            Board.ChessBoard[7, 1].Image = Image.FromFile("BKing.png");
-            Board.ChessBoard[1, 1].Image = Image.FromFile("WKing.png");
+            
             
         }
 

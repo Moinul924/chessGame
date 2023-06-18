@@ -9,6 +9,7 @@ namespace Chess2
 {
     public class Board
     {
+
         public static ChessBoardSquares[,] ChessBoard = new ChessBoardSquares[8,8];
 
         public Board()
