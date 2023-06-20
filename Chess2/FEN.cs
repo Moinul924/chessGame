@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Chess2
 {
-    public class FEN:Board
+    class FEN:Board
     {
         public void FENString(string FENString )
         {

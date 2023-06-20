@@ -15,13 +15,14 @@ namespace Chess2
 {
     public partial class Form1 : Form
     {
-        public Image PieceCopied;
-        public int PreviousLocationX;
-        public int PreviousLocationY;
-        public bool moveMade = false;
-        public int SquareSize = 80;
-        public static Color LightColor = ColorTranslator.FromHtml("#A97A65");
-        public static Color DarkColor = ColorTranslator.FromHtml("#F1D9C0");
+        private Image PieceCopied;
+        private int PreviousLocationX;
+        private int PreviousLocationY;
+        private bool moveMade = false;
+        private int SquareSize = 80;
+        private Color LightColor = ColorTranslator.FromHtml("#A97A65");
+        private Color DarkColor = ColorTranslator.FromHtml("#F1D9C0");
+        private Board InitialBoard;
 
         public Form1()
         {
@@ -30,8 +31,7 @@ namespace Chess2
         }
         public void DrawBoard()
         {
-
-
+            InitialBoard = new Board();
             for (int file = 0; file < 8; file++)
             {
                 for (int rank = 0; rank < 8; rank++)
@@ -57,7 +57,7 @@ namespace Chess2
                         NewBoardSquares.BackColor = LightColor;
                     }
                     this.Controls.Add(NewBoardSquares);
-                    Board.ChessBoard[file,rank] = NewBoardSquares;
+                    InitialBoard.AddChessBoardSquare(NewBoardSquares,rank, file);
                     NewBoardSquares.MouseEnter += new EventHandler(MouseEnter);
                     NewBoardSquares.MouseLeave += new EventHandler(MouseLeave);
                     NewBoardSquares.MouseDown += new MouseEventHandler(MouseDown);
@@ -85,7 +85,7 @@ namespace Chess2
             int locationY = currentPictureBox.SquarePositionY;
             if (PieceCopied != null)
             {
-                Board.AddPiece(PieceCopied, locationX, locationY);
+                InitialBoard.AddPiece(PieceCopied, locationX, locationY);
                 PieceCopied = null;
                 this.Cursor = Cursors.Default;
             }
@@ -113,8 +113,8 @@ namespace Chess2
             {
                 Bitmap bmp = (Bitmap)currentPictureBox.Image;
                 this.Cursor = new Cursor(bmp.GetHicon());
-                PieceCopied = Board.ChessBoard[locationX, locationY].Image;
-                Board.RemovePiece(locationX, locationY);
+                PieceCopied = InitialBoard.GetPiece(locationX, locationY);
+                InitialBoard.RemovePiece(locationX, locationY);
 
             }
         }
@@ -128,7 +128,7 @@ namespace Chess2
                
             if (currentPictureBox.ClientRectangle.Contains(currentPictureBox.PointToClient(Control.MousePosition)) & PieceCopied != null)
             {
-                Board.AddPiece(PieceCopied, locationX, locationY);
+                InitialBoard.AddPiece(PieceCopied, locationX, locationY);
                 PieceCopied = null;
                 this.Cursor = Cursors.Default;
             }
@@ -140,7 +140,7 @@ namespace Chess2
         {
             if (PieceCopied != null)
             {
-                Board.AddPiece(PieceCopied, PreviousLocationX, PreviousLocationY);
+                InitialBoard.AddPiece(PieceCopied, PreviousLocationX, PreviousLocationY);
                 PieceCopied = null;
                 this.Cursor = Cursors.Default;
             }

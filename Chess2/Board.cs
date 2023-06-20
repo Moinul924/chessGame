@@ -7,27 +7,30 @@ using System.Threading.Tasks;
 
 namespace Chess2
 {
-    public class Board
+    class Board
     {
 
-        public static ChessBoardSquares[,] ChessBoard = new ChessBoardSquares[8,8];
+        protected ChessBoardSquares[,] ChessBoards = new ChessBoardSquares[8,8];
 
-        public Board()
+        
+
+        public void RemovePiece(int SquarePositionX, int SquarePositionY)
         {
-            ChessBoard = new ChessBoardSquares[8, 8]; 
+            ChessBoards[SquarePositionX, SquarePositionY].Image = null;           
         }
 
-        public static void RemovePiece(int SquarePositionX, int SquarePositionY)
+        public void AddPiece(Image PieceCopied , int SquarePositionX, int SquarePositionY)
         {
-            ChessBoard[SquarePositionX, SquarePositionY].Image = null;
-            ChessBoard[SquarePositionX, SquarePositionY].RemoveChessPiece();
-           
-           
+            ChessBoards[SquarePositionX,SquarePositionY].Image = PieceCopied;
+        }
+        public void AddChessBoardSquare(ChessBoardSquares NewBoardSquares,int LocationX,int LocationY )
+        {
+            ChessBoards[LocationX, LocationY] = NewBoardSquares;
         }
 
-        public static void AddPiece(Image PieceCopied , int SquarePositionX, int SquarePositionY)
+        public Image GetPiece(int LocationX, int LocationY)
         {
-            ChessBoard[SquarePositionX,SquarePositionY].Image = PieceCopied;
+            return ChessBoards[LocationX, LocationY].Image;
         }
     }
 }
