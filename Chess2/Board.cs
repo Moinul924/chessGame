@@ -20,6 +20,8 @@ namespace Chess2
         public static void RemovePiece(int SquarePositionX, int SquarePositionY)
         {
             ChessBoard[SquarePositionX, SquarePositionY].Image = null;
+            ChessBoard[SquarePositionX, SquarePositionY].RemoveChessPiece();
+           
            
         }
 

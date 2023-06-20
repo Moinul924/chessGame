@@ -15,7 +15,7 @@ namespace Chess2
 
         public void RemoveChessPiece()
         {
-            
+            chessPiece = null;
         }
        
     }

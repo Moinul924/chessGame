@@ -45,6 +45,7 @@ namespace Chess2
                         SizeMode = PictureBoxSizeMode.CenterImage,
                         SquarePositionX = file,
                         SquarePositionY = rank,
+                        chessPiece = null,
                         
                     };
                     if ((rank + file) % 2 == 0)

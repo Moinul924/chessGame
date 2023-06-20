@@ -8,8 +8,8 @@ namespace Chess2
 {
     public class ChessPiece
     {
-        protected int chessPiece;
-        protected int chessPieceColour;
+        public int chessPiece;
+        public int chessPieceColour;
         ChessPiece(int PieceType,int Colour)
         {
             chessPiece = PieceType;
