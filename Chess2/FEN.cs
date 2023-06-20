@@ -31,7 +31,7 @@ namespace Chess2
             {
                 if (FENStringDictionary.ContainsKey(character))
                 {
-                    //ChessPiece chessPiece = new ChessPiece(Piece.Rook,Piece.Black);
+
                 }
             }
 
