@@ -11,17 +11,20 @@ namespace Chess2
     {
 
         protected ChessBoardSquares[,] ChessBoards = new ChessBoardSquares[8,8];
-
         
-
+        
         public void RemovePiece(int SquarePositionX, int SquarePositionY)
         {
             ChessBoards[SquarePositionX, SquarePositionY].Image = null;           
         }
 
-        public void AddPiece(Image PieceCopied , int SquarePositionX, int SquarePositionY)
+        public void AddPiece(Image ChessPiece , int LocationX, int LocationY)
         {
-            ChessBoards[SquarePositionX,SquarePositionY].Image = PieceCopied;
+            ChessBoards[LocationX,LocationY].Image = ChessPiece;
+        }
+        public void AddPiece(int LocationX, int LocationY,string FilePath)
+        {
+            ChessBoards[LocationX, LocationY].Image = Image.FromFile(FilePath);
         }
         public void AddChessBoardSquare(ChessBoardSquares NewBoardSquares,int LocationX,int LocationY )
         {

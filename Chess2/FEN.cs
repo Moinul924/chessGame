@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace Chess2
 {
-    class FEN:Board
+    class FEN
     {
+        Board InitialBoard = new Board();
         public void FENString(string FENString )
         {
             Dictionary<char,string> FENStringDictionary = new Dictionary<char , string>() {
@@ -31,7 +33,7 @@ namespace Chess2
             {
                 if (FENStringDictionary.ContainsKey(character))
                 {
-
+                  // InitialBoard.AddPiece(PositionY, character,FENStringDictionary.(character,out value));
                 }
             }
 

@@ -86,18 +86,42 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ChessPiece\Black\BBishop.png" />
-    <Content Include="ChessPiece\Black\BKight.png" />
-    <Content Include="ChessPiece\Black\BKing.png" />
-    <Content Include="ChessPiece\Black\BPawn.png" />
-    <Content Include="ChessPiece\Black\BQueen.png" />
-    <Content Include="ChessPiece\Black\BRook.png" />
-    <Content Include="ChessPiece\White\WBishop.png" />
-    <Content Include="ChessPiece\White\WKight.png" />
-    <Content Include="ChessPiece\White\WKing.png" />
-    <Content Include="ChessPiece\White\WPawn.png" />
-    <Content Include="ChessPiece\White\WQueen.png" />
-    <Content Include="ChessPiece\White\WRook.png" />
+    <Content Include="ChessPiece\Black\BBishop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChessPiece\Black\BKight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChessPiece\Black\BKing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChessPiece\Black\BPawn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChessPiece\Black\BQueen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChessPiece\Black\BRook.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChessPiece\White\WBishop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChessPiece\White\WKight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChessPiece\White\WKing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChessPiece\White\WPawn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChessPiece\White\WQueen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChessPiece\White\WRook.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
