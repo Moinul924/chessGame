@@ -68,7 +68,8 @@ namespace Chess2
                     
                 }
             }
-            
+            FEN NewFen = new FEN();
+            NewFen.FENString("N");
             
         }
 

@@ -18,5 +18,13 @@ namespace Chess2
 
         public const int White = 8;
         public const int Black = 16;
+
+
+        public static void GetImageOfPiece(string piece)
+        {
+
+        }
+
+
     }
 }

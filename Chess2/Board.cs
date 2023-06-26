@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chess2.Properties;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -24,7 +25,8 @@ namespace Chess2
         }
         public void AddPiece(int LocationX, int LocationY,string FilePath)
         {
-            ChessBoards[LocationX, LocationY].Image = Image.FromFile(FilePath);
+            
+            ChessBoards[LocationX, LocationY].Image = Resources.WQueen; 
         }
         public void AddChessBoardSquare(ChessBoardSquares NewBoardSquares,int LocationX,int LocationY )
         {

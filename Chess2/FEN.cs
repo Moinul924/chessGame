@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+
 namespace Chess2
 {
     class FEN
@@ -27,13 +28,14 @@ namespace Chess2
                 {'b',"BBishop.png" },
                 {'p',"BPawn.png" }
             };
-            int PositionX = 0;
-            int PositionY = 0;
+            int PositionX = 5;
+            int PositionY = 3;
             foreach( char character in FENString)
             {
                 if (FENStringDictionary.ContainsKey(character))
                 {
-                  // InitialBoard.AddPiece(PositionY, character,FENStringDictionary.(character,out value));
+                    InitialBoard.AddPiece(PositionX, PositionY, FENStringDictionary[character]);
+                 
                 }
             }
 
