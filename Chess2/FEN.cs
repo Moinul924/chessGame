@@ -14,19 +14,13 @@ namespace Chess2
         Board InitialBoard = new Board();
         public void FENString(string FENString )
         {
-            Dictionary<char,string> FENStringDictionary = new Dictionary<char , string>() {
-                {'K',"WKing.png" },
-                {'Q',"WQueen.png" },
-                {'R',"WRook.png" },
-                {'N',"WKight.png" },
-                {'B',"WBishop.png" },
-                {'P',"WPawn.png" },
-                {'k',"BKing.png" },
-                {'q',"BQueen.png" },
-                {'r',"BRook.png" },
-                {'n',"BKight.png" },
-                {'b',"BBishop.png" },
-                {'p',"BPawn.png" }
+            Dictionary<char,int> FENStringDictionary = new Dictionary<char , int>() {              
+                {'k',Piece.King },
+                {'q',Piece.Queen },
+                {'r',Piece.Rook },
+                {'n',Piece.Knight },
+                {'b',Piece.Bishop },
+                {'p',Piece.Pawn }
             };
             int PositionX = 5;
             int PositionY = 3;

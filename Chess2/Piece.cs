@@ -16,7 +16,7 @@ namespace Chess2
         public const int Rook = 5;
         public const int Queen = 6;
 
-        public const int White = 8;
+        public const int White = 15;
         public const int Black = 16;
 
 
